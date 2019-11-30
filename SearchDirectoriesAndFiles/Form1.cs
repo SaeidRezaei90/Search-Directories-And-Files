@@ -46,7 +46,16 @@ namespace SearchDirectoriesAndFiles
 
             if (checkBoxSearchFiles.Checked)
             {
-                SearchDirectoriesAndFiles.GetFiles(TxtBrowseName.Text, ref resultSaerch, checkBoxHiddenItem.Checked, checkBoxReadOnly.Checked, TxtExtention.Text);
+                if(TxtName.Text !=string.Empty)
+                {
+                    if (radioBtnMachCase.Checked)
+                        SearchDirectoriesAndFiles.GetFiles(TxtBrowseName.Text, ref resultSaerch, TxtName.Text, SearchDirectoriesAndFiles.SearchFileNameOption.MatchCase);
+                    else if (radioBtnWholeName.Checked)
+                        SearchDirectoriesAndFiles.GetFiles(TxtBrowseName.Text, ref resultSaerch, TxtName.Text, SearchDirectoriesAndFiles.SearchFileNameOption.WholeWord);
+                    else 
+                        SearchDirectoriesAndFiles.GetFiles(TxtBrowseName.Text, ref resultSaerch, TxtName.Text, SearchDirectoriesAndFiles.SearchFileNameOption.Normal);
+                }
+                //SearchDirectoriesAndFiles.GetFiles(TxtBrowseName.Text, ref resultSaerch, checkBoxHiddenItem.Checked, checkBoxReadOnly.Checked, TxtExtention.Text);
                 foreach (string file in resultSaerch)
                 {
                     listViewResult.Items.Add(Path.GetFileName(file));
