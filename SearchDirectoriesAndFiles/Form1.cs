@@ -31,30 +31,36 @@ namespace SearchDirectoriesAndFiles
             TxtBrowseName.Text = fld.SelectedPath;
         }
 
+        private SearchDirectoriesAndFiles.SearchFileNameOption SearchOption()
+        {
+            SearchDirectoriesAndFiles.SearchFileNameOption option = SearchDirectoriesAndFiles.SearchFileNameOption.None;
+            if (TxtName.Text !=string.Empty)
+                {
+                if (radioBtnMachCase.Checked)
+                    option = SearchDirectoriesAndFiles.SearchFileNameOption.MatchCase;
+                else if (radioBtnWholeName.Checked)
+                    option = SearchDirectoriesAndFiles.SearchFileNameOption.WholeWord;
+                else
+                    option = SearchDirectoriesAndFiles.SearchFileNameOption.Normal;
+            }
+            return option;
+        }
         private void BtnSearch_Click(object sender, EventArgs e)
         {
             List<string> resultSaerch = new List<string>();
             listViewResult.Clear();
             if (checkBoxDirectories.Checked)
             {
-                SearchDirectoriesAndFiles.GetDirectories(TxtBrowseName.Text, ref resultSaerch, checkBoxHiddenItem.Checked, checkBoxReadOnly.Checked);
+                SearchDirectoriesAndFiles.GetDirectories(TxtBrowseName.Text, ref resultSaerch, checkBoxHiddenItem.Checked, checkBoxReadOnly.Checked, TxtName.Text, SearchOption());
                 foreach (string dir in resultSaerch)
                 {
                     listViewResult.Items.Add(Path.GetFileName(dir));
                 }
             }
 
-            if (checkBoxSearchFiles.Checked)
+            else if (checkBoxSearchFiles.Checked)
             {
-                if(TxtName.Text !=string.Empty)
-                {
-                    if (radioBtnMachCase.Checked)
-                        SearchDirectoriesAndFiles.GetFiles(TxtBrowseName.Text, ref resultSaerch, TxtName.Text, SearchDirectoriesAndFiles.SearchFileNameOption.MatchCase);
-                    else if (radioBtnWholeName.Checked)
-                        SearchDirectoriesAndFiles.GetFiles(TxtBrowseName.Text, ref resultSaerch, TxtName.Text, SearchDirectoriesAndFiles.SearchFileNameOption.WholeWord);
-                    else 
-                        SearchDirectoriesAndFiles.GetFiles(TxtBrowseName.Text, ref resultSaerch, TxtName.Text, SearchDirectoriesAndFiles.SearchFileNameOption.Normal);
-                }
+                SearchDirectoriesAndFiles.GetFiles(TxtBrowseName.Text, ref resultSaerch, TxtName.Text, SearchOption());
                 //SearchDirectoriesAndFiles.GetFiles(TxtBrowseName.Text, ref resultSaerch, checkBoxHiddenItem.Checked, checkBoxReadOnly.Checked, TxtExtention.Text);
                 foreach (string file in resultSaerch)
                 {
@@ -62,7 +68,6 @@ namespace SearchDirectoriesAndFiles
                 }
             }
 
-
+        }
         }
     }
-}
