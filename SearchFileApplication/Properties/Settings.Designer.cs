@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SearchDirectoriesAndFiles.Properties
+namespace SearchFileApplication.Properties
 {
 
 
