@@ -57,6 +57,7 @@ namespace SearchFileApplication
 
                 };
                 ResultListView.Items.Add(item);
+                toolStripStatusCountlable.Text = ResultListView.Items.Count.ToString();
             }
 
 
@@ -85,6 +86,11 @@ namespace SearchFileApplication
         private void Form1_Load(object sender, EventArgs e)
         {
             ViewComboBox.SelectedIndex = 0;
+        }
+
+        private void statusStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }

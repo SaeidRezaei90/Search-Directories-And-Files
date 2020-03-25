@@ -19,3 +19,12 @@ E:\Github Rep\SearchDirectoriesAndFiles\SearchFileApplication\obj\Debug\SearchFi
 E:\Github Rep\SearchDirectoriesAndFiles\SearchFileApplication\obj\Debug\SearchFileApplication.Form1.resources
 E:\Github Rep\SearchDirectoriesAndFiles\SearchFileApplication\obj\Debug\SearchFileApplication.Properties.Resources.resources
 E:\Github Rep\SearchDirectoriesAndFiles\SearchFileApplication\obj\Debug\SearchFileApplication.csproj.GenerateResource.Cache
+E:\Github Rep\Search-Directories-And-Files\SearchFileApplication\bin\Debug\SearchFileApplication.exe.config
+E:\Github Rep\Search-Directories-And-Files\SearchFileApplication\obj\Debug\SearchFileApplication.exe
+E:\Github Rep\Search-Directories-And-Files\SearchFileApplication\obj\Debug\SearchFileApplication.pdb
+E:\Github Rep\Search-Directories-And-Files\SearchFileApplication\bin\Debug\SearchFileApplication.exe
+E:\Github Rep\Search-Directories-And-Files\SearchFileApplication\bin\Debug\SearchFileApplication.pdb
+E:\Github Rep\Search-Directories-And-Files\SearchFileApplication\obj\Debug\SearchFileApplication.csprojResolveAssemblyReference.cache
+E:\Github Rep\Search-Directories-And-Files\SearchFileApplication\obj\Debug\SearchFileApplication.Form1.resources
+E:\Github Rep\Search-Directories-And-Files\SearchFileApplication\obj\Debug\SearchFileApplication.Properties.Resources.resources
+E:\Github Rep\Search-Directories-And-Files\SearchFileApplication\obj\Debug\SearchFileApplication.csproj.GenerateResource.Cache

@@ -48,13 +48,14 @@
             this.ResultListBox = new System.Windows.Forms.ListBox();
             this.ItemCountToolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusCountlable = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.ResultListView = new System.Windows.Forms.ListView();
             this.LargeImageList1 = new System.Windows.Forms.ImageList(this.components);
             this.SmallImageList1 = new System.Windows.Forms.ImageList(this.components);
             this.ViewComboBox = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
             this.SearchOptionsPanel.SuspendLayout();
             this.SearchPatternGroupBox.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -245,19 +246,20 @@
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ItemCountToolStripStatusLabel,
-            this.toolStripStatusLabel1,
+            this.toolStripStatusLabel3,
+            this.toolStripStatusCountlable,
             this.toolStripStatusLabel2});
             this.statusStrip1.Location = new System.Drawing.Point(0, 540);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(622, 22);
             this.statusStrip1.TabIndex = 6;
             this.statusStrip1.Text = "statusStrip1";
+            this.statusStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.statusStrip1_ItemClicked);
             // 
-            // toolStripStatusLabel1
+            // toolStripStatusCountlable
             // 
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(40, 17);
-            this.toolStripStatusLabel1.Text = "Count";
+            this.toolStripStatusCountlable.Name = "toolStripStatusCountlable";
+            this.toolStripStatusCountlable.Size = new System.Drawing.Size(0, 17);
             // 
             // toolStripStatusLabel2
             // 
@@ -312,6 +314,12 @@
             this.label4.TabIndex = 9;
             this.label4.Text = "View Mode:";
             // 
+            // toolStripStatusLabel3
+            // 
+            this.toolStripStatusLabel3.Name = "toolStripStatusLabel3";
+            this.toolStripStatusLabel3.Size = new System.Drawing.Size(43, 17);
+            this.toolStripStatusLabel3.Text = "Count:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -359,7 +367,7 @@
         private System.Windows.Forms.CheckBox ReadOnlyCheckBox;
         private System.Windows.Forms.ToolStripStatusLabel ItemCountToolStripStatusLabel;
         private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusCountlable;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
         private System.Windows.Forms.GroupBox SearchPatternGroupBox;
         private System.Windows.Forms.RadioButton NormalRadioButton;
@@ -370,6 +378,7 @@
         private System.Windows.Forms.ImageList SmallImageList1;
         private System.Windows.Forms.ComboBox ViewComboBox;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel3;
     }
 }
 
